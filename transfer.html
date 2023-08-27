@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE B13</title>
+    <link rel="icon" href="./images/logo-big.png">
+    <!---Style CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <!---font awesome 5.12 Light-->
+    <link rel="stylesheet" href="./icons/all.min.css">
+    <link rel="stylesheet" href="./icons/light.min.css">
+    <!---Bootstrap 5 CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body id="home">
+
+    <header class="header">
+        <ul class="ul-inks">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#works">How It Works</a></li>
+        </ul>
+        <div class="header-img">
+            <img src="./images/logo-white.png" alt="logo">
+        </div>
+        <ul class="ul-inks">
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#contacts">Contact Us</a></li>
+        </ul>
+    </header>
+    <main>
+        <a href="./index.html" class="btn-border a-home">Home page</a>
+        <section class="section-transfer">
+            <div class="container-transfer">
+
+                <h1 class="h1-title">TRANSFER</h1>
+                <p class="p-title">this are details about your wallet</p>
+                <form action="">
+                    <div class="form-group copy-text">
+                        <div class="d-flex align-items-center justify-content-between flex-label">
+                            <label for="">Wallet Address</label>
+                            <button type="button"><img src="./images/copy-text.svg" /></button>
+                        </div>
+                        <textarea name="" id="" class="text"></textarea>
+                    </div>
+                    <div class="balance">
+                        <h3>Balance</h3>
+                        <h5>Detail about your B13 Balance</h5>
+                        <div class="d-flex align-items-center justify-content-center divs-balance">
+                            <div class="div-text">
+                                <h6>ToL</h6>
+                                <span>00,00</span>
+                            </div>
+                            <img src="./images/trans.svg" alt="trans">
+                            <div class="div-text">
+                                <h6>BNB</h6>
+                                <span>00,00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center flex-section1-btns">
+                        <a href="" class="btn-border" data-bs-toggle="modal" data-bs-target="#tabsModal">Withdraw</a>
+                        <a href="" class="btn-yellow slide-2">Deposit</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <div class="row align-items-end">
+                <div class="col-md-6">
+                    <div class="footer-img">
+                        <img src="./images/logo-mid.png" alt="logo" class="logo">
+                        <p>We're committed to providing you with a special <br>
+                            service that blends practicality,
+                            openness,
+                            and real- <br> time odds.</p>
+                        <div class="d-flex align-items-center flex-footer-img">
+                            <img src="./images/icon.svg" alt="icon">
+                            <span>Copyright 2023 All rights are reserved by <b>B13</b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center  flex-section1-btns ">
+                        <a href="" class="btn-border">Withdraw</a>
+                        <a href="" class="btn-yellow">Deposit</a>
+                    </div>
+                    <div class="images-contact">
+                        <a href=""><img src="./images/linkedin.svg" alt="linkedin"></a>
+                        <a href=""><img src="./images/instgram.svg" alt="instgram"></a>
+                        <a href=""><img src="./images/facebook.svg" alt="facebook"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Tabs-->
+    <div class="modal fade modal-wallet modal-tabs" id="tabsModal" tabindex="-1" aria-labelledby="congratsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="tabs">
+                        <ul id="tabs-nav">
+                            <li><a href="#tab1">Withdraw</a></li>
+                            <li><a href="#tab2">Deposit</a></li>
+                        </ul> <!-- END tabs-nav -->
+                        <div id="tabs-content">
+                            <div id="tab1" class="tab-content">
+                                <div class="form-group form-design">
+                                    <label for="">Receiver Address</label>
+                                    <div class="box-input">
+                                        <input type="text" name="" id="" class="form-control">
+                                        <img src="./images/scanner.svg" alt="scanner">
+                                    </div>
+                                </div>
+                                <div class="form-group form-design">
+                                    <label for="">Amount</label>
+                                    <input type="number" name="" id="" class="form-control input-design">
+                                </div>
+                                <div class="d-flex align-items-center  flex-section1-btns ">
+                                    <a href="" class="btn-border">Close</a>
+                                    <a href="" class="btn-yellow">Submit</a>
+                                </div>
+                            </div>
+                            <div id="tab2" class="tab-content">
+                                <img src="./images/bi_qr-code.png" alt="img-qr" class="img-qr">
+                                <div class="form-group form-design">
+                                    <div class="form-group copy-text copy-text2">
+                                        <div class="d-flex align-items-center justify-content-between flex-label">
+                                            <label for="">My Wallet Address</label>
+                                            <button type="button"><img src="./images/copy-text.svg" /></button>
+                                        </div>
+                                        <input type="text" class="text input-design form-control">
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center  flex-section1-btns ">
+                                    <a href="" class="btn-border">Close</a>
+                                    <a href="" class="btn-yellow">Submit</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap 5 JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- icons JS -->
+    <script src="./icons/all.min.js"></script>
+    <script src="./icons/light.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/transfer.js"></script>
+
+</html>
