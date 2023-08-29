@@ -14,6 +14,7 @@
     box-sizing: border-box;
 }
 body {
+  position: relative;
   overflow-x: hidden;
   background-color: #090000 !important;
 }
@@ -34,8 +35,9 @@ ul{padding-left: 0px !important;}
 }
 span{color: #fff;}
 header {
+  position: relative;
   background: #090000;
-  height: 126px;
+  height: 107px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,6 +70,100 @@ header .ul-inks li a{
   display: flex;
   padding: 0 140px;
 }
+.openMenuBtn{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 10;
+    width: 38px;
+  height: 40px;
+  margin: 10px auto;
+  background:transparent;
+  opacity: 0.5;
+  display: none;
+}
+
+.openMenuBtn div {
+  width: 100%;
+  height: 4px;
+  width: 28px;
+  background: white;
+  margin: 6px auto;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.openMenuBtn.on .one {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.openMenuBtn.on .two {
+  opacity: 0;
+}
+
+.openMenuBtn.on .three {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Start off-screen */
+    width: 300px;
+    height: 100%;
+    background-color: #090000;
+    padding: 20px;
+    color: #fff;
+    transition: left 0.3s;
+    z-index: 9999; /* Ensure it's above the overlay */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.side-flex {
+  margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.side-menu.active {
+    left: 0 !important;
+}
+.side-menu img{width: 150px;}
+.side-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 23px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Quicksand';
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1; /* Place it above the content */
+}
+.close-menu-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color:#535111 ;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
 .section1{
   background-image: url(../images/back-section1.png);
   background-size: cover;
@@ -82,12 +178,14 @@ header .ul-inks li a{
 }
 .mySlides {
   position: absolute;
-  top: 50%;
+  top: 41%;
   left: 50%;
   transform: translate(-50%,-40%);
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  width: 40%;
 }
+.img-hide{width: 40%;}
 .section1 h1{
   opacity: 0.9;
   color: #FFF;
@@ -104,7 +202,7 @@ header .ul-inks li a{
   font-size: 20px;
   font-weight: 600;
   opacity: 0.9;
-  padding-bottom: 53px;
+  padding-bottom: 13px;
 }
 .section1 h1 span{
   color: #F5EE31;
@@ -266,6 +364,7 @@ header .ul-inks li a{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 92vh;
 }
 .section3 .container-section3{
@@ -312,7 +411,7 @@ header .ul-inks li a{
   background-repeat: no-repeat;
   background-color: #090000;
   background-attachment: fixed;
-  padding: 125px 0px 150px 0px;
+  padding:40px 0px 150px 0px;
   width: 1288.55px;
   margin: auto;
 }
@@ -815,6 +914,7 @@ color: #F5EE31;
 }
 
 @media (max-width:1000px) {
+  .openMenuBtn{display: block;}
 .header{
   flex-direction: column;
     height: max-content;
@@ -845,7 +945,7 @@ color: #F5EE31;
   .section3 h1{margin-top: 4rem;}
   .section3 h4{font-size: 20px;}
  .mySlides{
-  top: 30%;
+  top: 100px;
   left: 0%;
   width: 100%;
   transform: translate(0%,0%);
@@ -923,6 +1023,14 @@ color: #F5EE31;
   .form-design .box-input{height: 55px;padding: 0 9px 0 5px;}
   #tab2 .img-qr{width: 100px;}
   .a-home{display: inline-flex;}
+  @keyframes moveArrow {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(50% - 50px)); /* Adjust to your arrow image width */
+    }
+}
 }
 @media (max-width:670px) {
 

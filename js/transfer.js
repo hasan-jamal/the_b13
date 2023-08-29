@@ -37,3 +37,25 @@ $("#tabs-nav li").click(function () {
   $(activeTab).fadeIn();
   return false;
 });
+function openModalAndTab(modalId, tabId) {
+  var modal = new bootstrap.Modal(document.getElementById(modalId));
+  modal.show();
+
+  var tabs = document.querySelectorAll(".tab-content");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].style.display = "none";
+  }
+  document.getElementById(tabId).style.display = "block";
+
+  var tabListItems = document.querySelectorAll("#tabs-nav li");
+  for (var i = 0; i < tabListItems.length; i++) {
+    tabListItems[i].classList.remove("active");
+  }
+
+  var selectedTabListItem = document.querySelector(
+    'a[href="#' + tabId + '"]'
+  ).parentNode;
+  if (selectedTabListItem) {
+    selectedTabListItem.classList.add("active");
+  }
+}
