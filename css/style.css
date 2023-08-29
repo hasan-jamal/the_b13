@@ -430,6 +430,7 @@ header .ul-inks li a{
   width: 240px;
   height: 318px;
   border-radius: 8px;
+  object-fit: cover;
   cursor: pointer;
 }
 .section4 .section4-img .active{
@@ -596,6 +597,8 @@ font-size: 18px;
 font-weight: 600;
 line-height: 28px;
 text-align: center;
+width: 42%;
+    margin: auto;
 }
 .section7 p span{color: #F5EE31;font-size: 28px;}
 .section7 .flex-section7{gap: 121px;}
@@ -1001,7 +1004,7 @@ color: #F5EE31;
     padding-bottom: 30px;
     padding: 40px 24px;
   }
-  .section7 p {margin-bottom: 2rem;}
+  .section7 p {margin-bottom: 2rem;width: 100%;}
   .section7 p br{display: none;}
   .flex-section7 img{display: none;}
   .section7 h1{line-height: 3rem;}
