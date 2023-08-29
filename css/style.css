@@ -178,7 +178,7 @@ header .ul-inks li a{
 }
 .mySlides {
   position: absolute;
-  top: 41%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%,-40%);
   opacity: 0;
