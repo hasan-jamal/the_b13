@@ -1,3 +1,4 @@
+// Side Menu on click toggle button
 $(document).ready(function () {
   const $openMenuBtn = $(".openMenuBtn");
   const $sideMenu = $(".side-menu");
